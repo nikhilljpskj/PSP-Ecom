@@ -51,7 +51,7 @@ const SocialIcon = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
-  ${mobile({ display: "flex", flexDirection: "column", alignItems: "center" })}
+  ${mobile({ display: "none" })}
 `;
 
 const Title = styled.h3`
@@ -85,18 +85,19 @@ const ContactItem = styled.div`
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  font-size: ${mobile({ fontSize: "14px", display: "none" })};
+  font-size: ${mobile({ fontSize: "14px" })};
+  ${mobile({ justifyContent: "center" })}
+`;
+
+const IconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
 `;
 
 const Payment = styled.img`
   width: 50%;
-  ${mobile({ width: "100%" })}
-`;
-
-const ContactItemMobile = styled.div`
-  margin-bottom: 20px;
-  display: none;
-  ${mobile({ display: "flex", alignItems: "center" })}
+  ${mobile({ width: "30%" })}
 `;
 
 const Footer = () => {
@@ -149,22 +150,23 @@ const Footer = () => {
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <Room style={{ marginRight: "10px" }} />
+          <IconWrapper>
+            <Room />
+          </IconWrapper>
           <span>DEE Thiruppur Tamil Nadu</span>
         </ContactItem>
         <ContactItem>
-          <Phone style={{ marginRight: "10px" }} />
+          <IconWrapper>
+            <Phone />
+          </IconWrapper>
           <span>+91 89216 52221</span>
         </ContactItem>
         <ContactItem>
-          <MailOutline style={{ marginRight: "10px" }} />
+          <IconWrapper>
+            <MailOutline />
+          </IconWrapper>
           <span>dee@gmail.com</span>
         </ContactItem>
-        <ContactItemMobile>
-          <Room style={{ marginRight: "10px" }} />
-          <Phone style={{ marginRight: "10px" }} />
-          <MailOutline style={{ marginRight: "10px" }} />
-        </ContactItemMobile>
         <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>
     </Container>
