@@ -1,7 +1,7 @@
 export const sliderItems = [
     {
       id: 1,
-      img: "https://as2.ftcdn.net/v2/jpg/05/30/50/83/1000_F_530508333_yOjz3MIo8f9EGaxPvR07e7EHpqGQdXi5.jpg",
+      img: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
       title: "WOMEN'S WEAR",
       desc: "SHOP FOR GIRLS",
       bg: "f5fafd",
