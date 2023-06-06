@@ -64,7 +64,7 @@ const List = styled.ul`
   padding: 0;
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column; /* Change to column */
 `;
 
 const ListItem = styled(Link)`
@@ -86,18 +86,11 @@ const ContactItem = styled.div`
   display: flex;
   align-items: center;
   font-size: ${mobile({ fontSize: "14px" })};
-  ${mobile({ justifyContent: "center" })}
-`;
-
-const IconWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
 `;
 
 const Payment = styled.img`
   width: 50%;
-  ${mobile({ width: "30%" })}
+  ${mobile({ width: "100%" })}
 `;
 
 const Footer = () => {
@@ -150,21 +143,15 @@ const Footer = () => {
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <IconWrapper>
-            <Room />
-          </IconWrapper>
+          <Room style={{ marginRight: "10px" }} />
           <span>DEE Thiruppur Tamil Nadu</span>
         </ContactItem>
         <ContactItem>
-          <IconWrapper>
-            <Phone />
-          </IconWrapper>
+          <Phone style={{ marginRight: "10px" }} />
           <span>+91 89216 52221</span>
         </ContactItem>
         <ContactItem>
-          <IconWrapper>
-            <MailOutline />
-          </IconWrapper>
+          <MailOutline style={{ marginRight: "10px" }} />
           <span>dee@gmail.com</span>
         </ContactItem>
         <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
