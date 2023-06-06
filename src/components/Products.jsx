@@ -22,6 +22,7 @@ const ContentContainer = styled.div`
 const StyledText = styled.div`
   font-size: 18px;
   margin-bottom: 10px;
+  text-align: justify;
 
   ${mobile({
     fontSize: "16px",
