@@ -22,10 +22,13 @@ const Left = styled.div`
   padding: 20px;
 `;
 
-const Logo = styled.h1``;
+const Logo = styled.h1`
+  font-size: ${mobile({ fontSize: "24px", marginBottom: "10px" })};
+`;
 
 const Desc = styled.p`
   margin: 20px 0px;
+  font-size: ${mobile({ fontSize: "14px" })};
 `;
 
 const SocialContainer = styled.div`
@@ -53,6 +56,7 @@ const Center = styled.div`
 
 const Title = styled.h3`
   margin-bottom: 30px;
+  font-size: ${mobile({ fontSize: "16px", marginBottom: "20px" })};
 `;
 
 const List = styled.ul`
@@ -81,6 +85,7 @@ const ContactItem = styled.div`
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+  font-size: ${mobile({ fontSize: "14px" })};
 `;
 
 const Payment = styled.img`
@@ -139,15 +144,15 @@ const Footer = () => {
         <Title>Contact</Title>
         <ContactItem>
           <Room style={{ marginRight: "10px" }} />
-          DEE Thiruppur Tamil Nadu
+          <span>DEE Thiruppur Tamil Nadu</span>
         </ContactItem>
         <ContactItem>
           <Phone style={{ marginRight: "10px" }} />
-          +91 89216 52221
+          <span>+91 89216 52221</span>
         </ContactItem>
         <ContactItem>
           <MailOutline style={{ marginRight: "10px" }} />
-          dee@gmail.com
+          <span>dee@gmail.com</span>
         </ContactItem>
         <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>
