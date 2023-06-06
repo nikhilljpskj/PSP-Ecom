@@ -68,6 +68,7 @@ const ListItem = styled(Link)`
   margin-bottom: 10px;
   text-decoration: none;
   color: black;
+  ${mobile({ width: "100%", display: "flex", justifyContent: "center" })}
 `;
 
 const Right = styled.div`
@@ -91,8 +92,8 @@ const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>PSP.</Logo>
-        <Desc>This is an online Ecom platform for PSP India</Desc>
+        <Logo>DEE</Logo>
+        <Desc>Online E-com platform for DEE</Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
             <Facebook />
@@ -138,7 +139,7 @@ const Footer = () => {
         <Title>Contact</Title>
         <ContactItem>
           <Room style={{ marginRight: "10px" }} />
-          PSP Thiruppur Tamil Nadu
+          DEE Thiruppur Tamil Nadu
         </ContactItem>
         <ContactItem>
           <Phone style={{ marginRight: "10px" }} />
@@ -146,7 +147,7 @@ const Footer = () => {
         </ContactItem>
         <ContactItem>
           <MailOutline style={{ marginRight: "10px" }} />
-          psp@gmail.com
+          dee@gmail.com
         </ContactItem>
         <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>

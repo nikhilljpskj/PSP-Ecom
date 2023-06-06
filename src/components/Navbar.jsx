@@ -37,12 +37,13 @@ const SearchContainer = styled.div`
   align-items: center;
   margin-left: 25px;
   padding: 5px;
-  ${mobile({ marginLeft: "2px" })}
+  ${mobile({ marginLeft: "2px", width: "40px" })}
 `;
 
 const Input = styled.input`
   border: none;
-  ${mobile({ width: "50px" })}
+  width: 100%;
+  ${mobile({ display: "none" })}
 `;
 
 const Center = styled.div`
