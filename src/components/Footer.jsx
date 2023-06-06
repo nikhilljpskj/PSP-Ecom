@@ -3,7 +3,6 @@ import {
   Instagram,
   MailOutline,
   Phone,
-  
   Room,
   Twitter,
 } from "@material-ui/icons";
@@ -31,6 +30,7 @@ const Desc = styled.p`
 
 const SocialContainer = styled.div`
   display: flex;
+  ${mobile({ justifyContent: "center", marginBottom: "20px" })}
 `;
 
 const SocialIcon = styled.div`
@@ -74,7 +74,6 @@ const Right = styled.div`
   flex: 1;
   padding: 20px;
   ${mobile({ backgroundColor: "#fff8f8" })}
-
 `;
 
 const ContactItem = styled.div`
@@ -83,10 +82,9 @@ const ContactItem = styled.div`
   align-items: center;
 `;
 
-
-
 const Payment = styled.img`
-    width: 50%;
+  width: 50%;
+  ${mobile({ width: "100%" })}
 `;
 
 const Footer = () => {
@@ -94,9 +92,7 @@ const Footer = () => {
     <Container>
       <Left>
         <Logo>PSP.</Logo>
-        <Desc>
-          This is an online Ecom platform for PSP India
-        </Desc>
+        <Desc>This is an online Ecom platform for PSP India</Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
             <Facebook />
@@ -107,33 +103,50 @@ const Footer = () => {
           <SocialIcon color="55ACEE">
             <Twitter />
           </SocialIcon>
-          
         </SocialContainer>
       </Left>
       <Center>
         <Title>Useful Links</Title>
         <List>
-          <ListItem to="/"><b>Home</b></ListItem>
-          <ListItem to="/cart"><b>Cart</b></ListItem>
-          <ListItem to="/mens_wear"><b>Man Fashion</b></ListItem>
-          <ListItem to="/girls_wear"><b>Woman Fashion</b></ListItem>
-          <ListItem to="/kids_wear"><b>Kids Fashion</b></ListItem>
-          <ListItem to="/"><b>My Account</b></ListItem>
-          <ListItem to="/"><b>Order Tracking</b></ListItem>
-          <ListItem to="/"><b>Wishlist</b></ListItem>
-          
+          <ListItem to="/">
+            <b>Home</b>
+          </ListItem>
+          <ListItem to="/cart">
+            <b>Cart</b>
+          </ListItem>
+          <ListItem to="/mens_wear">
+            <b>Man Fashion</b>
+          </ListItem>
+          <ListItem to="/girls_wear">
+            <b>Woman Fashion</b>
+          </ListItem>
+          <ListItem to="/kids_wear">
+            <b>Kids Fashion</b>
+          </ListItem>
+          <ListItem to="/">
+            <b>My Account</b>
+          </ListItem>
+          <ListItem to="/">
+            <b>Order Tracking</b>
+          </ListItem>
+          <ListItem to="/">
+            <b>Wishlist</b>
+          </ListItem>
         </List>
       </Center>
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <Room style={{marginRight:"10px"}}/> PSP Thiruppur Tamil Nadu
+          <Room style={{ marginRight: "10px" }} />
+          PSP Thiruppur Tamil Nadu
         </ContactItem>
         <ContactItem>
-          <Phone style={{marginRight:"10px"}}/> +91 89216 52221
+          <Phone style={{ marginRight: "10px" }} />
+          +91 89216 52221
         </ContactItem>
         <ContactItem>
-          <MailOutline style={{marginRight:"10px"}} /> psp@gmail.com
+          <MailOutline style={{ marginRight: "10px" }} />
+          psp@gmail.com
         </ContactItem>
         <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>

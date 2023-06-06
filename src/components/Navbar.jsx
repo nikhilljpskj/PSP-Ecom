@@ -15,13 +15,14 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  ${mobile({ padding: "10px 0px" })}
+  ${mobile({ padding: "10px", flexDirection: "column" })}
 `;
 
 const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  ${mobile({ justifyContent: "center", marginBottom: "10px" })}
 `;
 
 const Language = styled.span`
@@ -36,6 +37,7 @@ const SearchContainer = styled.div`
   align-items: center;
   margin-left: 25px;
   padding: 5px;
+  ${mobile({ marginLeft: "10px" })}
 `;
 
 const Input = styled.input`
@@ -53,7 +55,7 @@ const Logo = styled(Link)`
   color: black;
   text-decoration: none;
   font-weight: bold;
-  ${mobile({ fontSize: "24px" })}
+  ${mobile({ fontSize: "24px", marginBottom: "10px" })}
 `;
 
 const Right = styled.div`
@@ -61,7 +63,7 @@ const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  ${mobile({ flex: 2, justifyContent: "center" })}
+  ${mobile({ justifyContent: "center" })}
 `;
 
 const MenuItem = styled(Link)`
@@ -92,14 +94,12 @@ const Navbar = () => {
             <b>REGISTER</b>
           </MenuItem>
           <MenuItem to="/login">
-          <b>SIGN IN</b>
+            <b>SIGN IN</b>
           </MenuItem>
           <MenuItem to="/cart">
-            
-              <Badge badgeContent={4} color="primary">
-                <ShoppingCartOutlined />
-              </Badge>
-           
+            <Badge badgeContent={4} color="primary">
+              <ShoppingCartOutlined />
+            </Badge>
           </MenuItem>
         </Right>
       </Wrapper>

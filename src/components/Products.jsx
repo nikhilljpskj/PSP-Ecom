@@ -1,16 +1,20 @@
 import styled from "styled-components";
 import { useState } from "react";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
-  background-color: #f2f2f2; 
+  background-color: #f2f2f2;
   justify-content: space-between;
+
+  ${mobile({
+    padding: "10px",
+  })}
 `;
 
 const ContentContainer = styled.div`
- 
   padding: 20px;
   margin-bottom: 20px;
 `;
@@ -18,6 +22,10 @@ const ContentContainer = styled.div`
 const StyledText = styled.div`
   font-size: 18px;
   margin-bottom: 10px;
+
+  ${mobile({
+    fontSize: "16px",
+  })}
 `;
 
 const StyledButton = styled.button`

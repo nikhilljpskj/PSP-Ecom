@@ -9,10 +9,14 @@ const Container = styled.div`
   justify-content: center;
   font-size: 14px;
   font-weight: 500;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 const Announcement = () => {
-  return <Container></Container>;
+  return <Container>Announcement text goes here</Container>;
 };
 
 export default Announcement;
