@@ -49,7 +49,8 @@ const SocialIcon = styled.div`
 `;
 
 const Center = styled.div`
-  flex: 1;
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   ${mobile({ display: "none" })}
 `;
@@ -64,7 +65,7 @@ const List = styled.ul`
   padding: 0;
   list-style: none;
   display: flex;
-  flex-direction: column; /* Change to column */
+  flex-wrap: wrap;
 `;
 
 const ListItem = styled(Link)`
