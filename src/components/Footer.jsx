@@ -7,12 +7,14 @@ import {
   Twitter,
 } from "@material-ui/icons";
 import styled from "styled-components";
-import { mobile } from "../responsive";
 import { Link } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
-  ${mobile({ flexDirection: "column" })}
+  flex-direction: column;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 const Left = styled.div`
@@ -23,17 +25,19 @@ const Left = styled.div`
 `;
 
 const Logo = styled.h1`
-  font-size: ${mobile({ fontSize: "24px", marginBottom: "10px" })};
+  font-size: 24px;
+  margin-bottom: 10px;
 `;
 
 const Desc = styled.p`
   margin: 20px 0px;
-  font-size: ${mobile({ fontSize: "14px" })};
+  font-size: 14px;
 `;
 
 const SocialContainer = styled.div`
   display: flex;
-  ${mobile({ justifyContent: "center", marginBottom: "20px" })}
+  justify-content: center;
+  margin-bottom: 20px;
 `;
 
 const SocialIcon = styled.div`
@@ -41,7 +45,7 @@ const SocialIcon = styled.div`
   height: 40px;
   border-radius: 50%;
   color: white;
-  background-color: #${(props) => props.color};
+  background-color: ${(props) => props.color};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,29 +53,25 @@ const SocialIcon = styled.div`
 `;
 
 const Center = styled.div`
-  flex: 1;
-  padding: 20px;
-  ${mobile({ display: "none" })}
+  display: none;
+  @media (min-width: 768px) {
+    flex: 1;
+    display: block;
+    padding: 20px;
+  }
 `;
 
 const Title = styled.h3`
   margin-bottom: 30px;
-  font-size: ${mobile({ fontSize: "16px", marginBottom: "20px" })};
-  display: none;
-  ${Container}:hover & {
-    display: block;
-  }
+  font-size: 16px;
 `;
 
 const List = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
-  display: none;
-  ${Container}:hover & {
-    display: flex;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 const ListItem = styled(Link)`
@@ -79,25 +79,28 @@ const ListItem = styled(Link)`
   margin-bottom: 10px;
   text-decoration: none;
   color: black;
-  ${mobile({ width: "100%", display: "flex", justifyContent: "center" })}
+  @media (min-width: 768px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 const Right = styled.div`
   flex: 1;
-  padding: 20px;āāā
-  ${mobile({ backgroundColor: "#fff8f8" })}
+  padding: 20px;
+  background-color: #fff8f8;
 `;
 
 const ContactItem = styled.div`
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  font-size: ${mobile({ fontSize: "14px" })};
+  font-size: 14px;
 `;
 
 const Payment = styled.img`
   width: 50%;
-  ${mobile({ width: "100%" })}
 `;
 
 const Footer = () => {
