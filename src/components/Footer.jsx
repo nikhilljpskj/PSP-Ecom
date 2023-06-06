@@ -51,7 +51,7 @@ const SocialIcon = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
-  ${mobile({ display: "none" })}
+  ${mobile({ display: "flex", flexDirection: "column", alignItems: "center" })}
 `;
 
 const Title = styled.h3`
@@ -85,13 +85,18 @@ const ContactItem = styled.div`
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  font-size: ${mobile({ fontSize: "14px" })};
-  ${mobile({ marginLeft: "2px", width: "40px" })}
+  font-size: ${mobile({ fontSize: "14px", display: "none" })};
 `;
 
 const Payment = styled.img`
   width: 50%;
   ${mobile({ width: "100%" })}
+`;
+
+const ContactItemMobile = styled.div`
+  margin-bottom: 20px;
+  display: none;
+  ${mobile({ display: "flex", alignItems: "center" })}
 `;
 
 const Footer = () => {
@@ -155,6 +160,11 @@ const Footer = () => {
           <MailOutline style={{ marginRight: "10px" }} />
           <span>dee@gmail.com</span>
         </ContactItem>
+        <ContactItemMobile>
+          <Room style={{ marginRight: "10px" }} />
+          <Phone style={{ marginRight: "10px" }} />
+          <MailOutline style={{ marginRight: "10px" }} />
+        </ContactItemMobile>
         <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>
     </Container>
