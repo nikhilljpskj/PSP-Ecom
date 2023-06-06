@@ -12,28 +12,33 @@ import { Link } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
-  ${mobile({ flexDirection: "column" })}
+  flex-direction: column;
+  ${mobile({ alignItems: "center" })}
 `;
 
 const Left = styled.div`
-  flex: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 20px;
 `;
 
 const Logo = styled.h1`
-  font-size: ${mobile({ fontSize: "24px", marginBottom: "10px" })};
+  font-size: 24px;
+  ${mobile({ fontSize: "20px" })}
 `;
 
 const Desc = styled.p`
-  margin: 20px 0px;
-  font-size: ${mobile({ fontSize: "14px" })};
+  margin: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  ${mobile({ fontSize: "12px" })}
 `;
 
 const SocialContainer = styled.div`
   display: flex;
-  ${mobile({ justifyContent: "center", marginBottom: "20px" })}
+  justify-content: center;
+  margin-bottom: 20px;
 `;
 
 const SocialIcon = styled.div`
@@ -49,43 +54,41 @@ const SocialIcon = styled.div`
 `;
 
 const Center = styled.div`
-  flex: 1;
-  padding: 20px;
-  ${mobile({ display: "none" })}
+  display: none;
+  ${mobile({ display: "block", textAlign: "center", margin: "20px 0" })}
 `;
 
 const Title = styled.h3`
   margin-bottom: 30px;
-  font-size: ${mobile({ fontSize: "16px", marginBottom: "20px" })};
+  font-size: 16px;
 `;
 
 const List = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
 `;
 
 const ListItem = styled(Link)`
-  width: 50%;
-  margin-bottom: 10px;
   text-decoration: none;
   color: black;
-  ${mobile({ width: "100%", display: "flex", justifyContent: "center" })}
+  margin-bottom: 10px;
+  font-size: 14px;
+  ${mobile({ fontSize: "12px" })}
 `;
 
 const Right = styled.div`
-  flex: 1;
   padding: 20px;
-  ${mobile({ backgroundColor: "#fff8f8" })}
+  background-color: #fff8f8;
+  ${mobile({ padding: "10px" })}
 `;
 
 const ContactItem = styled.div`
-  margin-bottom: 20px;
   display: flex;
   align-items: center;
-  font-size: ${mobile({ fontSize: "14px" })};
+  font-size: 14px;
+  margin-bottom: 15px;
+  ${mobile({ marginBottom: "10px" })}
 `;
 
 const Payment = styled.img`
@@ -98,7 +101,7 @@ const Footer = () => {
     <Container>
       <Left>
         <Logo>DEE</Logo>
-        <Desc>Online E-com platform for DEE</Desc>
+        <Desc>Online E-commerce platform for DEE</Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
             <Facebook />
@@ -114,45 +117,29 @@ const Footer = () => {
       <Center>
         <Title>Useful Links</Title>
         <List>
-          <ListItem to="/">
-            <b>Home</b>
-          </ListItem>
-          <ListItem to="/cart">
-            <b>Cart</b>
-          </ListItem>
-          <ListItem to="/mens_wear">
-            <b>Man Fashion</b>
-          </ListItem>
-          <ListItem to="/girls_wear">
-            <b>Woman Fashion</b>
-          </ListItem>
-          <ListItem to="/kids_wear">
-            <b>Kids Fashion</b>
-          </ListItem>
-          <ListItem to="/">
-            <b>My Account</b>
-          </ListItem>
-          <ListItem to="/">
-            <b>Order Tracking</b>
-          </ListItem>
-          <ListItem to="/">
-            <b>Wishlist</b>
-          </ListItem>
+          <ListItem to="/">Home</ListItem>
+          <ListItem to="/cart">Cart</ListItem>
+          <ListItem to="/mens_wear">Man Fashion</ListItem>
+          <ListItem to="/girls_wear">Woman Fashion</ListItem>
+          <ListItem to="/kids_wear">Kids Fashion</ListItem>
+          <ListItem to="/">My Account</ListItem>
+          <ListItem to="/">Order Tracking</ListItem>
+          <ListItem to="/">Wishlist</ListItem>
         </List>
       </Center>
       <Right>
         <Title>Contact</Title>
         <ContactItem>
           <Room style={{ marginRight: "10px" }} />
-          <span>DEE Thiruppur Tamil Nadu</span>
+          DEE Thiruppur Tamil Nadu
         </ContactItem>
         <ContactItem>
           <Phone style={{ marginRight: "10px" }} />
-          <span>+91 89216 52221</span>
+          +91 89216 52221
         </ContactItem>
         <ContactItem>
           <MailOutline style={{ marginRight: "10px" }} />
-          <span>dee@gmail.com</span>
+          dee@gmail.com
         </ContactItem>
         <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>
